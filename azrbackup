@@ -1,0 +1,28 @@
+/* I copy some of the relevant code from my azr blog as backup before I play with it */
+/* 735-758 */
+.collapsible,.collapsible>summary{
+display:block;
+overflow:hidden
+}
+.collapsible>:not(summary){
+display:none
+}
+.collapsible[open]>:not(summary){
+display:block
+}
+.collapsible:focus,.collapsible>summary:focus{
+outline:0
+}
+.collapsible>summary{
+cursor:pointer;
+display:block;
+padding:0
+}
+.collapsible:focus>summary,.collapsible>summary:focus{
+background-color:transparent
+}
+.collapsible>summary::-webkit-details-marker{
+display:none
+}
+
+/* changing summary default "display: list-item" value with "display: flex" will hide it as well via 2 issues; so does "list-style: none" in details > summary */
