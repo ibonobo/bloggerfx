@@ -1,0 +1,50 @@
+/* it can go after ]]></b:skin> */
+
+<!-- Blogger I Feel Lucky (Phydeaux3) Article Randomizer -->
+<script type='text/javascript'>
+//<![CDATA[
+function showLucky(root){
+    var feed = root.feed;
+    var entries = feed.entry || [];
+    var entry = feed.entry[0];
+      for (var j = 0; j < entry.link.length; ++j) {
+       if (entry.link[j].rel == "alternate") { 
+       window.location = entry.link[j].href; 
+       } 
+      } 
+   }
+function fetchLuck(luck){
+    script = document.createElement('script');
+    script.src = '/feeds/posts/summary?start-index='+luck+'&max-results=1&alt=json-in-script&callback=showLucky';
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
+   }
+function readLucky(root){
+    var feed = root.feed;
+    var total = parseInt(feed.openSearch$totalResults.$t,10);
+    var luckyNumber = Math.floor(Math.random()*total);
+    luckyNumber++;
+    fetchLuck(luckyNumber);
+    }
+function feelingLucky(){
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '/feeds/posts/summary?max-results=0&alt=json-in-script&callback=readLucky';
+    document.getElementsByTagName('head')[0].appendChild(script);
+    }
+//]]>
+</script>
+<!-- End Blogger I Feel Lucky (Phydeaux3) Article Randomizer -->
+
+/* or add the following as a widget */
+<style>#genius-howto{position:relative;color:rgba(0,0,0,1);text-decoration:none;font-family:'Times New Roman';font-size:25px;display:block;box-shadow:0px 0px 0 #000000, 0 9px 25px rgba(0,0,0,.6);margin-bottom:10px;margin-top:10px;width:90%;text-align:center;padding:4px;float:center;}
+#genius-howto:hover{box-shadow:0 3px 0 #000000, 0 3px 6px rgba(0,0,0,.9);position:relative;top:5px}
+#genius-howto a{color: #000; text-decoration:none;}</style>
+<div id="genius-howto"></div>
+<script src="http://geniusknight.weebly.com/files/theme/iamfeelinglucky.js"></script>
+<script src="/feeds/posts/summary?max-results=0&alt=json-in-script&callback=feelingLucky">
+</script>
+
+/* here's the js code */
+function showLucky(root){ var feed = root.feed; var entries = feed.entry || []; var entry = feed.entry[0]; for (var j = 0; j < entry.link.length; ++j){if (entry.link[j].rel == 'alternate'){window.location = entry.link[j].href;}}} function fetchLuck(luck){ script = document.createElement('script'); script.src = '/feeds/posts/summary?start-index='+luck+'&max-results=1&alt=json-in-script&callback=showLucky'; 
+script.type = 'text/javascript'; document.getElementsByTagName('head')[0].appendChild(script); } function feelingLucky(root){ var feed = root.feed; var total = parseInt(feed.openSearch$totalResults.$t,10); var luckyNumber = Math.floor(Math.random()*total);luckyNumber++; a = document.createElement('a'); a.href = '#random'; a.rel = luckyNumber; a.onclick = function(){fetchLuck(this.rel);}; a.innerHTML = 'I am Feeling Lucky!';document.getElementById('genius-howto').appendChild(a); }
