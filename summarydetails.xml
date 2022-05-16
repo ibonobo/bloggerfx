@@ -1,0 +1,72 @@
+/* the newest blogger blogspot templates, while responsive, seem to break the summary / details tags magic; I looked for a few fixes */
+
+/* the simplest fix is in HTML and involves getting it started in the open state by adding open to details, as in <details open> */
+
+/* the first, from https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion/ will point a fixed arrow at it */
+details {
+  margin: 1rem;
+}
+summary {
+  font-weight: bold;
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  color: transparent;
+}
+
+/* the second, same source, will move the arrow, but the arrow returns if out of focus + won't go back */
+details {
+  margin: 1rem;
+}
+summary {
+  font-weight: bold;
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+summary:focus {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  color: transparent;
+}
+summary:focus::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}
+
+/* switch cursor value to pointer on hover from https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/ */
+details summary { 
+  cursor: pointer;
+}
+
+/* make headings inline element to prevent empty space, source as above */
+details summary > * { 
+  display: inline;
+}
+  
+/* the following creates a look similar to a tabbed interface, where clicking the tab opens it to reveal its contents from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details */
+details {
+  font: 16px "Open Sans", Calibri, sans-serif;
+  width: 620px;
+}
+
+details > summary {
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 3px 3px 4px black;
+  cursor: pointer;
+}
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+details[open] > summary {
+  background-color: #ccf;
+}
