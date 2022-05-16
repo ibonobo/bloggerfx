@@ -1,0 +1,5 @@
+/* I always start by adding TagManager and hiding the Attribution1 widget (typically below) */
+/* the first version goes just before </head> */
+<style>#Attribution1{display: none;}</style> 
+/* alternatively, the following could also go just before ]]></b:skin> */
+#Attribution1{display:none;}
