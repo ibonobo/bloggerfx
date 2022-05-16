@@ -1,0 +1,93 @@
+/* this usually goes on top, right after <b:skin> */
+
+/* === Hide the NavBar === */
+.Navbar {
+visibility:hidden;
+display: none;
+}
+/* === Hide the NavBar === */
+
+
+/* ===== rel styling BlogIdol.ro start ===== */
+/* all A tags whose HREF attribute ends in .pdf */
+a[href$='.pdf'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh6.googleusercontent.com/-cPu16DcSgyQ/VOn19IXm2lI/AAAAAAAAWc0/3VqitKfHPZk/w11-h12-no/icon_pdf.gif) no-repeat center right;
+}
+
+/* all A tags whose HREF attribute ends in .ppt */
+a[href$='.ppt'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh5.googleusercontent.com/-IREkcthdkEc/VOoA9ddJDHI/AAAAAAAAWdY/lm1bKxyU7Lo/s24-no/ppt_icon.png) no-repeat center right;
+}
+
+/* all A tags whose REL attribute equals pdf */
+a[rel='pdf'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh6.googleusercontent.com/-cPu16DcSgyQ/VOn19IXm2lI/AAAAAAAAWc0/3VqitKfHPZk/w11-h12-no/icon_pdf.gif) no-repeat center right;
+}
+
+/*  all A tags whose REL attributes has the letters pdf somewhere mixed in*/
+a[rel*='pdf'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh6.googleusercontent.com/-cPu16DcSgyQ/VOn19IXm2lI/AAAAAAAAWc0/3VqitKfHPZk/w11-h12-no/icon_pdf.gif) no-repeat center right;
+}
+
+/* all A tags whose REL attribute equals ytvid */
+a[rel='ytvid'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh3.googleusercontent.com/-SS7yydr-_z0/VOoJlvmL5BI/AAAAAAAAWd8/wg9YkW4JbWw/s12-no/youtube_icon.png) no-repeat center right;
+}
+
+/*  all A tags whose REL attributes has the letters vid somewhere mixed in*/
+a[rel*='vid'] { 
+    padding-right: 10px;
+    background: transparent url(https://lh3.googleusercontent.com/-SS7yydr-_z0/VOoJlvmL5BI/AAAAAAAAWd8/wg9YkW4JbWw/s12-no/youtube_icon.png) no-repeat center right;
+}
+
+/*  all A tags whose link has wikipedia somewhere mixed in*/
+a[href*='wikipedia'] { 
+    padding-right: 15px;
+    background: transparent url(https://lh3.googleusercontent.com/-FyHmb-WfRqE/VOoJl8A8HSI/AAAAAAAAWeA/Vxtocc4WtzM/s14-no/WikiLetter_icon.png) no-repeat center right;
+}
+
+/*  all A tags whose link has www.youtube.com somewhere mixed in*/
+a[href*='www.youtube.com'] { 
+    padding-right: 15px;
+    background: transparent url(https://lh3.googleusercontent.com/-SS7yydr-_z0/VOoJlvmL5BI/AAAAAAAAWd8/wg9YkW4JbWw/s12-no/youtube_icon.png) no-repeat center right;
+}
+
+/* all A tags whose REL attribute contains the value pdf, separated from other values with a space */
+a[rel~='pdf'] { 
+    padding-right: 15px;
+    background: transparent url(https://lh6.googleusercontent.com/-cPu16DcSgyQ/VOn19IXm2lI/AAAAAAAAWc0/3VqitKfHPZk/w11-h12-no/icon_pdf.gif) no-repeat center right;
+}
+
+/* all A tags whose HREF attribute starts with mailto: */
+a[href ^="mailto:"] {
+    padding-right: 15px;
+    background: transparent url(https://lh4.googleusercontent.com/-dp0EIp4pbFI/VOn18dE9QJI/AAAAAAAAWco/R5XYFAtl7ss/w11-h12-no/icon_mailto.gif) no-repeat center right;
+}
+
+/* all A tags whose CLASS attribute is popup */
+a[class ="popup"] {
+    padding-right: 15px;
+    background: transparent url(https://lh5.googleusercontent.com/-CSy-S3L6wmk/VOn19c3wPMI/AAAAAAAAWc8/WNY75omByFo/w11-h12-no/icon_popup.gif) no-repeat center right;
+}
+
+
+a[href$='.doc'] { 
+    padding-right: 15px;
+    background: transparent url(https://lh5.googleusercontent.com/-dQYkIEFp_wE/VOn18RBk2cI/AAAAAAAAWcc/SxG4N_LaTNM/w11-h12-no/icon_doc.gif) no-repeat center right;
+}
+
+a[href$='.xls'] { 
+    padding-right: 15px;
+    background: transparent url(https://lh4.googleusercontent.com/-_ZHbTar1w1Y/VOn19S5nWGI/AAAAAAAAWc4/GBbfKrntu6Q/w11-h12-no/icon_xls.gif) no-repeat center right;
+}
+
+a[rel ~='external'] {
+    padding-right: 15px;
+    background: transparent url(https://lh4.googleusercontent.com/-hU1T1osFi6k/VOn18fnHXoI/AAAAAAAAWcg/BJ_zNg8i59c/w11-h12-no/icon_external.gif) no-repeat center right;
+}
+/* ===== rel styling BlogIdol.ro start ===== */
