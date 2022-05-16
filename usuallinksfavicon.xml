@@ -1,12 +1,5 @@
 /* this usually goes on top, right after <b:skin> */
 
-/* === Hide the NavBar === */
-.Navbar {
-visibility:hidden;
-display: none;
-}
-/* === Hide the NavBar === */
-
 
 /* ===== rel styling BlogIdol.ro start ===== */
 /* all A tags whose HREF attribute ends in .pdf */
